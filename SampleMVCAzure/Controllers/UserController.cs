@@ -35,7 +35,7 @@ namespace SampleMVCAzure.Controllers
         [HttpPost]
         public IActionResult Create(Users user)
         {
-            _logger.LogWarning("AZURE TEST: Added user {Name} at {Time}", user.Name, DateTime.Now.ToShortTimeString());
+            
             _context.Users.Add(user);
             _context.SaveChanges();
             return RedirectToAction("Index");
